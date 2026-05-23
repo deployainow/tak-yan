@@ -235,9 +235,13 @@ figcaption {
   box-shadow: var(--shadow);
 }
 
+.image-link {
+  display: block;
+}
+
 .hero-card img,
 .gallery-card img,
-.visit-image img {
+.image-link img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -344,26 +348,31 @@ h3 {
   color: var(--cream);
 }
 
-.menu-notes,
+.gallery-grid,
 .visit-aside {
   display: grid;
   gap: 1rem;
 }
 
-.menu-notes {
-  grid-template-columns: repeat(2, 1fr);
+.gallery-grid {
+  grid-template-columns: 1.3fr 0.7fr;
 }
 
-.menu-note-card,
+.gallery-card,
 .visit-aside {
   border-radius: var(--radius-lg);
+  overflow: hidden;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.03);
   box-shadow: var(--shadow);
 }
 
-.menu-note-card {
-  padding: 1.5rem;
+.gallery-card img {
+  aspect-ratio: 16 / 10;
+}
+
+figcaption {
+  padding: 1rem 1.1rem 1.2rem;
 }
 
 .visit-aside {
@@ -436,7 +445,7 @@ h3 {
   .story-grid,
   .feature-grid,
   .menu-layout,
-  .menu-notes,
+  .gallery-grid,
   .offer-banner,
   .confidence-grid,
   .visit,
