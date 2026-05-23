@@ -15,7 +15,7 @@
   --radius-lg: 30px;
   --radius-md: 20px;
   --radius-sm: 14px;
-  --container: min(1180px, calc(100vw - 2rem));
+  --container: min(1360px, calc(100vw - 2rem));
 }
 
 *,
@@ -148,8 +148,8 @@ h3 {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.48fr 0.52fr;
-  gap: 2.5rem;
+  grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.9fr);
+  gap: 3rem;
   align-items: center;
   padding: 3.5rem 0 2rem;
 }
@@ -170,11 +170,13 @@ h3 {
 .hero-copy {
   padding: clamp(1.7rem, 4vw, 3rem);
   border-radius: var(--radius-lg);
+  max-width: 860px;
 }
 
 h1 {
-  font-size: clamp(2.9rem, 3.6vw, 4.15rem);
+  font-size: clamp(3rem, 3.15vw, 4rem);
   margin: 0.5rem 0 1rem;
+  max-width: 16ch;
 }
 
 .hero-text,
