@@ -65,8 +65,7 @@ a {
   gap: 1.25rem;
   margin-top: 1rem;
   padding: 1.2rem 0;
-  position: sticky;
-  top: 0;
+  position: static;
   z-index: 20;
   backdrop-filter: blur(18px);
 }
@@ -149,8 +148,8 @@ h3 {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.18fr 0.82fr;
-  gap: 2rem;
+  grid-template-columns: 1.48fr 0.52fr;
+  gap: 2.5rem;
   align-items: center;
   padding: 3.5rem 0 2rem;
 }
@@ -174,7 +173,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3rem, 4.8vw, 5.1rem);
+  font-size: clamp(2.9rem, 3.6vw, 4.15rem);
   margin: 0.5rem 0 1rem;
 }
 
