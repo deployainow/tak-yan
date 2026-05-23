@@ -344,26 +344,41 @@ h3 {
   color: var(--cream);
 }
 
-.gallery-grid {
+.menu-notes,
+.visit-aside {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
   gap: 1rem;
 }
 
-.gallery-card,
-.visit-image {
+.menu-notes {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.menu-note-card,
+.visit-aside {
   border-radius: var(--radius-lg);
-  overflow: hidden;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
 }
 
-.gallery-card img {
-  aspect-ratio: 16 / 10;
+.menu-note-card {
+  padding: 1.5rem;
 }
 
-figcaption {
-  padding: 1rem 1.1rem 1.2rem;
+.visit-aside {
+  align-content: start;
+  padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.visit-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.visit-list li + li {
+  margin-top: 0.8rem;
 }
 
 .offer-banner {
@@ -421,7 +436,7 @@ figcaption {
   .story-grid,
   .feature-grid,
   .menu-layout,
-  .gallery-grid,
+  .menu-notes,
   .offer-banner,
   .confidence-grid,
   .visit,
