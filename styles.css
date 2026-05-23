@@ -1,0 +1,494 @@
+:root {
+  --bg: #130b08;
+  --bg-soft: #20120d;
+  --panel: #261711;
+  --panel-soft: rgba(255, 248, 237, 0.08);
+  --text: #f8f0e5;
+  --muted: #d7c3ae;
+  --line: rgba(255, 233, 204, 0.12);
+  --gold: #e7b348;
+  --gold-soft: #f4d08d;
+  --red: #a92d22;
+  --red-bright: #c94330;
+  --cream: #fff5e9;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --radius-lg: 30px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  --container: min(1180px, calc(100vw - 2rem));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(231, 179, 72, 0.15), transparent 24%),
+    radial-gradient(circle at 0% 25%, rgba(169, 45, 34, 0.28), transparent 22%),
+    linear-gradient(180deg, #110906 0%, #190d09 52%, #120907 100%);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+.section,
+.hero,
+.service-strip,
+.site-footer {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(19, 11, 8, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  z-index: -1;
+}
+
+.brand-lockup {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-kicker,
+.eyebrow,
+.tag,
+.offer-code span {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--gold-soft);
+}
+
+.brand-mark,
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.05;
+}
+
+.brand-mark {
+  text-decoration: none;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav a,
+.header-cta,
+.button {
+  text-decoration: none;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.header-cta,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-cta {
+  background: linear-gradient(135deg, var(--gold) 0%, #ffdd96 100%);
+  color: #2b1307;
+  padding: 0.85rem 1.25rem;
+  font-weight: 800;
+}
+
+.header-cta:hover,
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3.5rem 0 2rem;
+}
+
+.hero-copy,
+.story-card,
+.menu-card,
+.feature-panel,
+.confidence-card,
+.offer-banner,
+.visit-panel,
+.service-strip article {
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero-copy {
+  padding: clamp(1.7rem, 4vw, 3rem);
+  border-radius: var(--radius-lg);
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-text,
+.section-heading p,
+.story-card p,
+.menu-card li,
+.feature-panel p,
+.offer-copy p,
+.confidence-card p,
+.detail-grid p,
+.visit-panel p,
+.site-footer p,
+figcaption {
+  color: var(--muted);
+}
+
+.hero-actions,
+.visit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 1.6rem 0;
+}
+
+.button {
+  padding: 0.95rem 1.4rem;
+  font-weight: 800;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--red-bright), var(--gold));
+  color: white;
+}
+
+.button-secondary {
+  border: 1px solid rgba(255, 245, 233, 0.22);
+  background: rgba(255, 245, 233, 0.04);
+}
+
+.hero-points {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero-points li::before {
+  content: "•";
+  color: var(--gold);
+  margin-right: 0.6rem;
+}
+
+.hero-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 233, 204, 0.16);
+  box-shadow: var(--shadow);
+}
+
+.hero-card img,
+.gallery-card img,
+.visit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem auto 0;
+}
+
+.service-strip article {
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.3rem;
+}
+
+.service-strip span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--gold-soft);
+}
+
+.service-strip strong {
+  font-size: 1.1rem;
+}
+
+.section {
+  padding: 5.5rem 0 0;
+}
+
+.section-heading {
+  max-width: 52rem;
+  margin-bottom: 1.8rem;
+}
+
+h2 {
+  font-size: clamp(2.3rem, 4vw, 4.2rem);
+  margin: 0.35rem 0 0;
+}
+
+.story-grid,
+.feature-grid,
+.confidence-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.story-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.feature-grid {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 1.25rem;
+}
+
+.confidence-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.story-card,
+.feature-panel,
+.confidence-card,
+.menu-card {
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+h3 {
+  font-size: 1.9rem;
+  margin: 0.35rem 0 0.6rem;
+}
+
+.menu-layout,
+.visit {
+  display: grid;
+  gap: 1rem;
+}
+
+.menu-layout {
+  grid-template-columns: 1.2fr 0.8fr;
+  margin-bottom: 1.2rem;
+}
+
+.menu-list,
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.price-list strong {
+  color: var(--cream);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1rem;
+}
+
+.gallery-card,
+.visit-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.gallery-card img {
+  aspect-ratio: 16 / 10;
+}
+
+figcaption {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.offer-banner {
+  border-radius: var(--radius-lg);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: 1rem;
+  background:
+    radial-gradient(circle at top right, rgba(244, 208, 141, 0.22), transparent 30%),
+    linear-gradient(135deg, rgba(169, 45, 34, 0.7), rgba(38, 23, 17, 0.88));
+}
+
+.offer-code {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 245, 233, 0.18);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 1.35rem;
+}
+
+.offer-code strong {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0.4rem 0;
+}
+
+.visit {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: stretch;
+}
+
+.visit-panel {
+  border-radius: var(--radius-lg);
+  padding: clamp(1.7rem, 4vw, 3rem);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.detail-grid h3 {
+  font-size: 1.4rem;
+}
+
+.site-footer {
+  padding: 2rem 0 3rem;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .site-header,
+  .hero,
+  .story-grid,
+  .feature-grid,
+  .menu-layout,
+  .gallery-grid,
+  .offer-banner,
+  .confidence-grid,
+  .visit,
+  .detail-grid,
+  .service-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    border-radius: 28px;
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    background:
+      radial-gradient(circle at 100% 0%, rgba(231, 179, 72, 0.18), transparent 30%),
+      linear-gradient(180deg, #110906 0%, #190d09 52%, #120907 100%);
+  }
+
+  .site-header,
+  .section,
+  .hero,
+  .service-strip,
+  .site-footer {
+    width: min(100vw - 1.25rem, 1180px);
+  }
+
+  .brand-mark {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 2.65rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-copy,
+  .story-card,
+  .feature-panel,
+  .menu-card,
+  .confidence-card,
+  .visit-panel {
+    padding: 1.3rem;
+  }
+
+  .service-strip article {
+    padding: 1rem 1.1rem;
+  }
+
+  .section {
+    padding-top: 4rem;
+  }
+}
